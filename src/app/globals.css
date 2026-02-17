@@ -1,26 +1,100 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-void: #0d0015;
+  --color-void-light: #160025;
+  --color-deep-purple: #1a0030;
+  --color-nebula: #2d1054;
+  --color-mystic: #6b21a8;
+  --color-orchid: #9333ea;
+  --color-rose-glow: #e879b8;
+  --color-soft-pink: #f0abcf;
+  --color-moon-white: #f5e6ff;
+  --color-star-pink: #ffc8e6;
+  --color-lavender: #c4b5fd;
+  --color-deep-rose: #be185d;
+  --color-cosmic-violet: #7c3aed;
+  --color-ethereal: rgba(139, 92, 246, 0.15);
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0d0015;
+  color: #f5e6ff;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Glassmorphism — purple-tinted */
+.glass {
+  background: rgba(109, 40, 217, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+.glass-strong {
+  background: rgba(109, 40, 217, 0.15);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.25);
+  border-radius: 2px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.4);
+}
+
+/* Touch action for canvas */
+canvas {
+  touch-action: none;
+}
+
+/* Glow effects */
+.glow-pink {
+  box-shadow: 0 0 20px rgba(232, 121, 184, 0.3), 0 0 60px rgba(232, 121, 184, 0.1);
+}
+.glow-purple {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 0 0 60px rgba(139, 92, 246, 0.1);
+}
+.glow-text {
+  text-shadow: 0 0 20px rgba(232, 121, 184, 0.5), 0 0 40px rgba(139, 92, 246, 0.3);
+}
+
+/* Animate fade in */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fadeUp 0.4s ease-out forwards;
+}
+
+/* Subtle float */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }

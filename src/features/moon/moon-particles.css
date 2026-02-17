@@ -1,0 +1,186 @@
+/* ─── Moon Atmospheric Particles ───
+ * CSS-only animated particles for the Rituals section.
+ * Lunar palette: silver, violet, soft lavender.
+ * GPU-accelerated with will-change hints.
+ */
+
+.moon-particles-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.moon-particle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* ─── Particle 1: Silver, float upward ─── */
+.moon-particle-1 {
+  width: 3px;
+  height: 3px;
+  background: #d8b4fe;
+  box-shadow: 0 0 8px 3px rgba(216, 180, 254, 0.4);
+  bottom: 5%;
+  left: 12%;
+  animation: moon-float-1 11s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+/* ─── Particle 2: Violet, drift diagonal ─── */
+.moon-particle-2 {
+  width: 2px;
+  height: 2px;
+  background: #a78bfa;
+  box-shadow: 0 0 6px 2px rgba(167, 139, 250, 0.35);
+  bottom: 10%;
+  right: 18%;
+  animation: moon-float-2 14s ease-in-out infinite;
+  animation-delay: 2.5s;
+}
+
+/* ─── Particle 3: Warm silver, slow rise ─── */
+.moon-particle-3 {
+  width: 3px;
+  height: 3px;
+  background: #c4b5fd;
+  box-shadow: 0 0 10px 3px rgba(196, 181, 253, 0.3);
+  bottom: 3%;
+  left: 45%;
+  animation: moon-float-3 16s ease-in-out infinite;
+  animation-delay: 5s;
+}
+
+/* ─── Particle 4: Deep violet, gentle sway ─── */
+.moon-particle-4 {
+  width: 2px;
+  height: 2px;
+  background: #7c3aed;
+  box-shadow: 0 0 6px 2px rgba(124, 58, 237, 0.3);
+  bottom: 8%;
+  right: 35%;
+  animation: moon-float-1 13s ease-in-out infinite;
+  animation-delay: 7s;
+}
+
+/* ─── Particle 5: Bright lavender, fast ─── */
+.moon-particle-5 {
+  width: 2px;
+  height: 2px;
+  background: #d8b4fe;
+  box-shadow: 0 0 5px 2px rgba(216, 180, 254, 0.25);
+  bottom: 2%;
+  left: 72%;
+  animation: moon-float-2 9s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+/* ─── Particle 6: Soft white-violet ─── */
+.moon-particle-6 {
+  width: 3px;
+  height: 3px;
+  background: #ede9fe;
+  box-shadow: 0 0 8px 3px rgba(237, 233, 254, 0.25);
+  bottom: 6%;
+  left: 28%;
+  animation: moon-float-3 12s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* ─── Particle 7: Extra violet accent ─── */
+.moon-particle-7 {
+  width: 2px;
+  height: 2px;
+  background: #a78bfa;
+  box-shadow: 0 0 6px 2px rgba(167, 139, 250, 0.3);
+  bottom: 4%;
+  right: 8%;
+  animation: moon-float-1 10s ease-in-out infinite;
+  animation-delay: 8.5s;
+}
+
+/* ─── Particle 8: Silver faint ─── */
+.moon-particle-8 {
+  width: 2px;
+  height: 2px;
+  background: #c4b5fd;
+  box-shadow: 0 0 5px 1px rgba(196, 181, 253, 0.2);
+  bottom: 1%;
+  left: 58%;
+  animation: moon-float-2 15s ease-in-out infinite;
+  animation-delay: 6s;
+}
+
+/* ─── Keyframes: Float upward with gentle sway left ─── */
+@keyframes moon-float-1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.4;
+  }
+  25% {
+    transform: translate(-15px, -25%) scale(1.1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(10px, -50%) scale(0.9);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translate(-8px, -75%) scale(1.05);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(5px, -110%) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* ─── Keyframes: Float upward with gentle sway right ─── */
+@keyframes moon-float-2 {
+  0% {
+    transform: translate(0, 0) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.35;
+  }
+  30% {
+    transform: translate(12px, -30%) scale(1);
+    opacity: 0.45;
+  }
+  60% {
+    transform: translate(-8px, -55%) scale(1.1);
+    opacity: 0.35;
+  }
+  100% {
+    transform: translate(15px, -105%) scale(0.7);
+    opacity: 0;
+  }
+}
+
+/* ─── Keyframes: Slow rise, barely sways ─── */
+@keyframes moon-float-3 {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-45%) scale(1.05);
+    opacity: 0.4;
+  }
+  88% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-100%) scale(0.85);
+    opacity: 0;
+  }
+}

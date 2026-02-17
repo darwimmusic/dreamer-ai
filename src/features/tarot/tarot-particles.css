@@ -1,0 +1,169 @@
+/* ─── Tarot Atmospheric Particles ───
+ * CSS-only animated particles for the Arcana Gallery.
+ * GPU-accelerated with will-change hints.
+ */
+
+.tarot-particles-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.tarot-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* ─── Particle 1: Pink, diagonal L→R ─── */
+.tarot-particle-1 {
+  background: #e879b8;
+  box-shadow: 0 0 6px 2px rgba(232, 121, 184, 0.4);
+  top: 15%;
+  left: -5%;
+  animation: tarot-drift-lr-1 12s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+/* ─── Particle 2: Light pink, diagonal R→L ─── */
+.tarot-particle-2 {
+  background: #f0abcf;
+  box-shadow: 0 0 6px 2px rgba(240, 171, 207, 0.35);
+  top: 40%;
+  right: -5%;
+  width: 2px;
+  height: 2px;
+  animation: tarot-drift-rl-1 10s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* ─── Particle 3: Purple, diagonal L→R ─── */
+.tarot-particle-3 {
+  background: #c084fc;
+  box-shadow: 0 0 8px 3px rgba(192, 132, 252, 0.35);
+  top: 65%;
+  left: -3%;
+  animation: tarot-drift-lr-2 14s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+/* ─── Particle 4: Lavender, diagonal R→L ─── */
+.tarot-particle-4 {
+  background: #a78bfa;
+  box-shadow: 0 0 6px 2px rgba(167, 139, 250, 0.3);
+  top: 25%;
+  right: -4%;
+  width: 2px;
+  height: 2px;
+  animation: tarot-drift-rl-2 9s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* ─── Particle 5: Pink small, diagonal L→R ─── */
+.tarot-particle-5 {
+  background: #e879b8;
+  box-shadow: 0 0 5px 1px rgba(232, 121, 184, 0.3);
+  top: 80%;
+  left: -6%;
+  width: 2px;
+  height: 2px;
+  animation: tarot-drift-lr-1 15s ease-in-out infinite;
+  animation-delay: 6s;
+}
+
+/* ─── Particle 6: Purple soft, diagonal R→L ─── */
+.tarot-particle-6 {
+  background: #c084fc;
+  box-shadow: 0 0 7px 2px rgba(192, 132, 252, 0.3);
+  top: 50%;
+  right: -3%;
+  animation: tarot-drift-rl-1 11s ease-in-out infinite;
+  animation-delay: 3.5s;
+}
+
+/* ─── Keyframes: Diagonal L→R variant 1 ─── */
+@keyframes tarot-drift-lr-1 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(calc(100vw * 0.5 + 40px), -60px);
+    opacity: 0;
+  }
+}
+
+/* ─── Keyframes: Diagonal L→R variant 2 ─── */
+@keyframes tarot-drift-lr-2 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.45;
+  }
+  85% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(calc(100vw * 0.45 + 30px), -80px);
+    opacity: 0;
+  }
+}
+
+/* ─── Keyframes: Diagonal R→L variant 1 ─── */
+@keyframes tarot-drift-rl-1 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.45;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(calc(-100vw * 0.5 - 30px), -50px);
+    opacity: 0;
+  }
+}
+
+/* ─── Keyframes: Diagonal R→L variant 2 ─── */
+@keyframes tarot-drift-rl-2 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  88% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: translate(calc(-100vw * 0.45 - 40px), -70px);
+    opacity: 0;
+  }
+}
