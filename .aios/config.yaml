@@ -1,0 +1,34 @@
+# AIOS Project Configuration
+version: 2.1.0
+project:
+  name: dreamer-ai
+  type: brownfield
+  description: "App mistico/astrologico com navegacao 3D por sistema solar"
+  repository: https://github.com/darwimmusic/dreamer-ai
+  created: 2026-02-18
+
+stack:
+  framework: "Next.js 16.1.6"
+  runtime: "Node.js 22.12.0"
+  language: TypeScript
+  styling: "Tailwind CSS v4"
+  state: Zustand
+  "3d": "React Three Fiber v9 / Three.js"
+  animation: "Framer Motion + GSAP"
+
+environment:
+  bootstrapped: true
+  bootstrap_date: "2026-02-18T00:00:00"
+  mode: brownfield
+
+workflow:
+  current: brownfield-development
+  phase: development
+
+permissions:
+  mode: ask
+
+settings:
+  auto_update_status: true
+  quality_gates_enabled: true
+  language: pt-BR
