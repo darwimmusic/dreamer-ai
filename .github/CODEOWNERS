@@ -1,0 +1,16 @@
+# CODEOWNERS — dreamer-ai
+# Each line is a file pattern followed by one or more owners.
+# Order matters: last matching pattern takes precedence.
+
+# Default owner for everything
+* @darwimmusic
+
+# 3D Solar System core — critical, texture system must not break
+src/components/solar-system/ @darwimmusic
+src/lib/planets-data.ts @darwimmusic
+
+# CI/CD infrastructure
+.github/ @darwimmusic
+
+# Feature modules
+src/features/ @darwimmusic
