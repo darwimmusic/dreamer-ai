@@ -15,6 +15,8 @@ const eslintConfig = defineConfig([
     // AIOS Framework (installed dependency)
     ".aios-core/**",
     ".aios/**",
+    ".claude/**",
+    "squads/**",
     // Other common ignores
     "node_modules/**",
     ".git/**",

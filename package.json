@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
+    "lint:ci": "eslint --max-warnings 10",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
