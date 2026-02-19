@@ -12,6 +12,13 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // AIOS Framework (installed dependency)
+    ".aios-core/**",
+    ".aios/**",
+    // Other common ignores
+    "node_modules/**",
+    ".git/**",
+    "*.log",
   ]),
 ]);
 
